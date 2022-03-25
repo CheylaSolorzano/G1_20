@@ -43,7 +43,7 @@ class Socios extends Conectar{
     public function update_socio($id, $nombre, $razonsocial, $direcccion, $tipo_socio, $contacto, $email, $fecha_creado, $estado, $telefono){
         $conectar=parent::conexion();
         parent::set_names();
-        $sql="UPDATE ma_socios_negocio SET nombre=? razon_social=?, direccion=?,tipo_socio=?,contacto=?, email=?, fecha_creado=?, estado=?, telefono=?, WHERE ID=?";
+        $sql="UPDATE ma_socios_negocio SET nombre=?, razon_social=?, direccion=?,tipo_socio=?,contacto=?, email=?, fecha_creado=?, estado=?, telefono=? WHERE ID=?";
         $sql=$conectar->prepare($sql);
         $sql->bindValue(1, $nombre);
         $sql->bindValue(2, $razonsocial);

@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
         break;
 
         case "UpdatePedido_Proveedor":
-            $datos = $pedidos_proveedor -> update_pedido_proveedor($body["ID"],$body["FECHA_PEDIDO"],$body["DETALLE"],$body["SUB_TOTAL"],$body["TOTAL_ISV"],$body["TOTAL"],$body["FECHA_ENTREGA"],$body["ESTADO"]);
+            $datos = $pedidos_proveedor -> update_pedido_proveedor($body["ID"],$body["ID_SOCIO"], $body["FECHA_PEDIDO"],$body["DETALLE"],$body["SUB_TOTAL"],$body["TOTAL_ISV"],$body["TOTAL"],$body["FECHA_ENTREGA"],$body["ESTADO"]);
             echo json_encode("Pedido del proveedor actualizado");
         break;
         
